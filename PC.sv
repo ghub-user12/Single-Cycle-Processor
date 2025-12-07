@@ -1,4 +1,4 @@
-module PC(input logic clk, input logic reset, input logic pc_in, output logic pc);
+module PC(input logic clk, input logic reset, input logic [31:0] pc_in, output logic [31:0] pc);
     
     always_ff @(posedge clk, posedge reset)
         if (reset) pc <= 0;

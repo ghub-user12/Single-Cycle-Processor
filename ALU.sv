@@ -1,4 +1,4 @@
-module ALU #(parameter N=8)(input logic [N-1:0] a, input logic[N-1:0] b, input logic [1:0] cntrl, output logic [N-1:0] out);
+module ALU #(parameter N=32)(input logic [N-1:0] a, input logic[N-1:0] b, input logic [1:0] cntrl, output logic [N-1:0] out);
 
     always_comb 
         case (cntrl)
@@ -9,3 +9,5 @@ module ALU #(parameter N=8)(input logic [N-1:0] a, input logic[N-1:0] b, input l
             default : out = '0;
         endcase
 endmodule
+
+// TODO: Flags
